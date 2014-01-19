@@ -2,9 +2,26 @@ body{
 	background-color: #EBEBEB;
 }
 
+@font-face {
+
+font-family: 'olivier';
+
+src: url('/fonts/olivier_demo.ttf') format ('ttf');
+
+src: local("olivier"), url( '/fonts/olivier_demo.ttf' ) format("truetype");
+
+}
+
+h1{
+	font-family: 'olivier';
+	font-size: 7em;
+	margin: 0px;
+	margin-top: 15px;
+	position: absolute;
+}
 .img_holder{
 	width: 100%;
-	height: 300px;
+	height: 400px;
 	text-align: -webkit-center;
 	overflow: hidden;
 	margin-top: 12px;
@@ -17,17 +34,16 @@ body{
 }
 
 #navbar{
-	width: 81%;
-	height: 50px;
-	margin-bottom: 7;
-	padding: 5;
+	width: 96%;
+	height: 70px;
+	padding: 5px;
 	border-radius: 5px;
-	margin-top: 30px;
+	margin-top: 20px;
 	position: fixed;
 	background-color: #DDD;
 	top: 0px;
 	box-shadow: 0px 0px 15px 1px #888;
-	margin-left: -0.5%;
+	margin-left: -3%;
 }
 
 #navbar.shrink {
@@ -37,7 +53,13 @@ body{
 
 #navbar.grow {
 	transition: all 0.4s;
-	width: 81%;
+	width: 96%;
+}
+
+.nav-pills>li {
+	float: left;
+	padding-left: 12px;
+	padding-top: 5px;
 }
 
 .bottom_content{
@@ -46,9 +68,9 @@ body{
 }
 
 .main_container {
-	width: 80%;
-	margin-left: 10%;
-	margin-top: 90px;
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 110px;
 	box-shadow: 0px 50px 96px 50px #888;
 }
 
@@ -58,8 +80,8 @@ body{
 	border: solid;
 	border-color: white;
 	position: absolute;
-	left: 588;
-	top: 322;
+	left: 588px;
+	top: 440px;
 	box-shadow: 0px 4px 20px #888;
 }
 
@@ -73,4 +95,8 @@ body{
 #nav_circle.grow {
 	transition: left 0.4s;
 	left: 588px;
+}
+
+.glyphicon{
+	font-size: 2em;
 }

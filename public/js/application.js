@@ -16,7 +16,7 @@ $(document).ready(function(){
 		var scrollIndex = $(window).scrollTop();
 		$('#header_img').css({'margin-top' :-170 + (scrollIndex*0.5)});
 		console.log(scrollIndex);
-		if (scrollIndex > 315){
+		if (scrollIndex > 433){
 			shrinkNavbar();
 			$('#nav_circle').addClass('shrink').removeClass('grow');
 		}else{
