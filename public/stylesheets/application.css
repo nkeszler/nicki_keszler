@@ -18,10 +18,11 @@ body{
 
 #navbar{
 	width: 81%;
+	height: 50px;
 	margin-bottom: 7;
 	padding: 5;
 	border-radius: 5px;
-	margin-top: 15px;
+	margin-top: 30px;
 	position: fixed;
 	background-color: #DDD;
 	top: 0px;
@@ -29,15 +30,25 @@ body{
 	margin-left: -0.5%;
 }
 
+#navbar.shrink {
+	transition: all 0.4s;
+	width: 10%;
+}
+
+#navbar.grow {
+	transition: all 0.4s;
+	width: 81%;
+}
+
 .bottom_content{
 	height: 1000px;
-	background-color: #000;
+	background-color: #FFF;
 }
 
 .main_container {
 	width: 80%;
 	margin-left: 10%;
-	margin-top: 75px;
+	margin-top: 90px;
 	box-shadow: 0px 50px 96px 50px #888;
 }
 
@@ -48,5 +59,18 @@ body{
 	border-color: white;
 	position: absolute;
 	left: 588;
-	top: 346;
+	top: 322;
+	box-shadow: 0px 4px 20px #888;
+}
+
+#nav_circle.shrink {
+	transition: left 0.4s;
+	position: fixed;
+	left: 100px;
+	top: 8px;
+}
+
+#nav_circle.grow {
+	transition: left 0.4s;
+	left: 588px;
 }

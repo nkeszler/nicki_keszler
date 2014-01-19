@@ -1,3 +1,13 @@
+function shrinkNavbar(){
+	$('#navbar').addClass('shrink').removeClass('grow');
+	$('li').hide();
+};
+
+function growNavbar(){
+	$('#navbar').addClass('grow').removeClass('shrink');
+	$('li').show();
+};
+
 $(document).ready(function(){
 
 	var lastScroll = 0;
@@ -5,6 +15,14 @@ $(document).ready(function(){
 
 		var scrollIndex = $(window).scrollTop();
 		$('#header_img').css({'margin-top' :-170 + (scrollIndex*0.5)});
+		console.log(scrollIndex);
+		if (scrollIndex > 315){
+			shrinkNavbar();
+			$('#nav_circle').addClass('shrink').removeClass('grow');
+		}else{
+			growNavbar();
+			$('#nav_circle').addClass('grow').removeClass('shrink');
+		}
 
 // For scroll up and down
   //   if (scrollIndex > lastScroll){
