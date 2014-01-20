@@ -1,5 +1,5 @@
 .main_container
-	%ul.nav.nav-pills#navbar
+	%ul.nav.nav-pills.dragMe#navbar
 		%li
 			%a{href: "#"}
 				%span.glyphicon.glyphicon-home
@@ -11,7 +11,25 @@
 				%span.glyphicon.glyphicon-pushpin
 	.img_holder
 		%img#header_img{src: '/images/leaping.jpg'}
-	%img#nav_circle{class: 'img-circle', src: '/images/leaping.jpg'}
+	%img.img-circle.dragMe#nav_circle{src: '/images/leaping.jpg'}
 	.bottom_content
-		%h1
+		%h1#signature
 			Nichlas Keszler
+		#signature_contact
+			%h2
+				Web Developer
+			%h3
+				Southampton, NY
+		.logos
+			.logo-container
+				%img.logo#m-logo{src: '/images/mail-icon.png'}
+				%img.shadow{src: '/images/shadow.png'}
+			.logo-container
+				%img.logo#gh-logo{src: '/images/github.png'}
+				%img.shadow{src: '/images/shadow.png'}
+			.logo-container
+				%img.logo#fb-logo{src: '/images/facebook-logo.png'}
+				%img.shadow{src: '/images/shadow.png'}
+			.logo-container
+				%img.logo#p-logo{src: '/images/black-phone.png'}
+				%img.shadow{src: '/images/shadow.png'}
