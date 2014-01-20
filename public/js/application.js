@@ -34,14 +34,14 @@ function fadeSignatureAndLogos(scrollIndex){
 function hoverIn(object, lastScroll){
 	if(lastScroll > 225){
 		object.children().addClass('hover');
-		object.children().animate({width: "+=1px", height: "+=1px"},4);
-		// object.parent().children().not(object).children().animate({width: "-=2px", height: "-=2px"},4);
+		object.children().animate({width: "+=1px", height: "+=1px",'margin-left': "-=1px"},4);
+		// object.parent().children().not(object).children().animate({width: "-=1px", height: "-=1px"},4);
 	}
 }
 function hoverOut(object, lastScroll){
 		object.children().removeClass('hover');
-		object.children().animate({width: "-=1px", height: "-=1px"},4);
-		// object.parent().children().not(object).children().animate({width: "+=2px", height: "+=2px"},4);
+		object.children().animate({width: "-=1px", height: "-=1px",'margin-left': "+=1px"},4);
+		// object.parent().children().not(object).children().animate({width: "+=1px", height: "+=1px"},4);
 }
 
 $(document).ready(function(){
