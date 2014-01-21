@@ -22,14 +22,18 @@
 				Southampton, NY
 		.logos
 			.logo-container
-				%img.logo#m-logo{src: '/images/mail-icon.png'}
+				%img.logo#m-logo(src='/images/mail-icon.png' data-text='nkeszler10@gmail.com')
 				%img.shadow{src: '/images/shadow.png'}
 			.logo-container
-				%img.logo#gh-logo{src: '/images/github.png'}
+				%img.logo#gh-logo(src='/images/github.png' data-text='github.com/nkeszler')
 				%img.shadow{src: '/images/shadow.png'}
 			.logo-container
-				%img.logo#fb-logo{src: '/images/facebook-logo.png'}
+				%img.logo#fb-logo(src='/images/facebook-logo.png' data-text='facebook.com/nicki.keszler')
 				%img.shadow{src: '/images/shadow.png'}
 			.logo-container
-				%img.logo#p-logo{src: '/images/black-phone.png'}
+				%img.logo#p-logo(src='/images/black-phone.png' data-text='+1 (631) 413-7143')
 				%img.shadow{src: '/images/shadow.png'}
+		.text-area
+			%h1#hide-line " The best time to plant a tree is 20 years ago.
+			%h1#line2 The second best time is now. "
+			%h3#hide-line - Chinese proverb
