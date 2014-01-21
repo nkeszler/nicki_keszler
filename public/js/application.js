@@ -39,8 +39,8 @@ function removeContactText(){
 	$('.text-area *').show();
 	$('#contact-text').remove();
 }
-function hoverIn(object, lastScroll){
-	if(lastScroll > 225){
+function hoverIn(object, lastScroll, scrollAmount){
+	if(lastScroll > (scrollAmount*0.44)){
 		object.children().addClass('hover');
 		object.children().animate({width: "+=1px", height: "+=1px",'margin-left': "-=1px",'margin-bottom': "-=1px"},4);
 		displayContactText(object);
@@ -54,8 +54,8 @@ function hoverOut(object, lastScroll){
 		removeContactText();
 }
 function bob(){
-	$('.logos .logo').animate({'margin-top': '-=5px', 'margin-bottom': '+=5px'},800,function(){
-		$('.logos .logo').animate({'margin-top': '+=5px', 'margin-bottom': '-=5px'},800,bob());
+	$('.logos .logo').animate({'margin-top': '-=5px', 'margin-bottom': '+=5px'},700,function(){
+		$('.logos .logo').animate({'margin-top': '+=5px', 'margin-bottom': '-=5px'},700,bob());
 	});
 	// $('.logos img:not(.logo)').animate({'opacity':'-=0.1'},800,function(){
 	// 	$('.logos img:not(.logo)').animate({'opacity':'+=0.1'},800,bob());
@@ -71,6 +71,9 @@ $(document).ready(function(){
 
 	// Detect Scroll - Shrink Navbar + Fade Logos/Signature + Adjust Header Img
 	$(window).on('scroll', function(){
+		// Reset Scroll Amount
+		scrollAmount = $(document).height() - window.innerHeight;
+
 		// Disable hover: Hover + Contact Text
 		$('.logo-container>img').removeClass('hover');
 		$('#contact-text').remove();
@@ -90,7 +93,7 @@ $(document).ready(function(){
 	bob();
 	
 	// Hover Logos
-	$('.logo-container').hover(function() { hoverIn($(this),lastScroll) }, function() { hoverOut($(this),lastScroll)});
+	$('.logo-container').hover(function() { hoverIn($(this),lastScroll, scrollAmount) }, function() { hoverOut($(this),lastScroll)});
 
 });
 

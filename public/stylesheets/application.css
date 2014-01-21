@@ -37,7 +37,7 @@ src: local("olivier"), url( '/fonts/olivier_demo.ttf' ) format("truetype");
 }
 
 #navbar{
-	left: 65;
+	left: 5.1%;
 	width: 96%;
 	height: 70px;
 	padding: 5px;
@@ -52,13 +52,13 @@ src: local("olivier"), url( '/fonts/olivier_demo.ttf' ) format("truetype");
 
 #navbar.shrink {
 	transition: all 0.4s;
-	left: 85px;
+	left: 6.66%;
 	width: 8%;
 }
 
 #navbar.grow {
 	transition: all 0.4s;
-	left: 65px;
+	left: 5.1%;
 	width: 96%;
 }
 
@@ -129,8 +129,8 @@ src: local("olivier"), url( '/fonts/olivier_demo.ttf' ) format("truetype");
 
 .logos{
 	padding-top: 90px;
-	margin-left: 100px;
-	margin-right: 100px;
+	margin-left: auto;
+	margin-right: auto;
 	text-align: center;
 }
 
@@ -150,6 +150,7 @@ src: local("olivier"), url( '/fonts/olivier_demo.ttf' ) format("truetype");
 }
 
 .shadow{
+	opacity: 0;
 	margin: 15px auto 0 auto;
 	display: block;
 	width: 150px;
