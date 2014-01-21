@@ -1,5 +1,4 @@
 require 'sinatra'
-require 'Haml'
 
 require_relative './routes/init'
 
