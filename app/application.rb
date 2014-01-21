@@ -1,6 +1,6 @@
 require 'bundler/setup'
 require 'sinatra'
-require 'Haml'
+require 'haml'
 
 require_relative './routes/init'
 
