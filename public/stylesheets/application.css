@@ -101,8 +101,8 @@ src: local("olivier"), url( '/fonts/olivier_demo.ttf' ) format("truetype");
 #nav_circle.shrink {
 	transition: left 0.4s;
 	position: fixed;
-	left: 70px;
-	top: 8px;
+	left: 5.5%; /*was 70px*/
+	top: 1.1%; /*was 8px*/
 }
 
 #nav_circle.grow {
@@ -123,18 +123,22 @@ src: local("olivier"), url( '/fonts/olivier_demo.ttf' ) format("truetype");
 
 #signature_contact h3{
 	font-family: 'Salsa';
-	font-size: 1.7em;
+	font-size: 1.9vw;
 	margin-top: 0px;
 }
 
 #signature_contact h2{
 	font-family: 'Salsa';
-	font-size: 3.5em;
+	font-size: 3.9vw;
 	margin-top: 0px;
 }
 
+.text-area h1{
+	font-size: 2.8vw;
+}
+
 .logos{
-	padding-top: 90px;
+	padding-top: 7.8%; /*was 90px*/
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
@@ -142,9 +146,9 @@ src: local("olivier"), url( '/fonts/olivier_demo.ttf' ) format("truetype");
 
 .logos .logo {
 	opacity: 0;
-	height: 156px;
-	padding-left: 20px;
-	padding-right: 20px;
+	height: 23.5%;  /*was 156px*/
+	padding-left: 9%;  /*was 20px*/
+	padding-right: 9%;  /*was 20px*/
 }
 
 .hover {
@@ -160,6 +164,7 @@ src: local("olivier"), url( '/fonts/olivier_demo.ttf' ) format("truetype");
 	margin: 15px auto 0 auto;
 	display: block;
 	width: 150px;
+	/*width:16%;*/
 }
 
 .text-area *{
@@ -168,10 +173,10 @@ src: local("olivier"), url( '/fonts/olivier_demo.ttf' ) format("truetype");
 
 .text-area{
 	text-align: center;
-	margin-top: 80px;
+	margin-top: 8%; /*was 80px*/
 }
 
 #contact-text{
-	font-size: 3.8em;
-	padding-top: 80px
+	font-size: 4.1vw;
+	padding-top: 7%; /*was 80px*/
 }
