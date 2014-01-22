@@ -173,7 +173,7 @@ src: local("olivier"), url( '/fonts/olivier_demo.ttf' ) format("truetype");
 
 .text-area{
 	text-align: center;
-	margin-top: 8%; /*was 80px*/
+	margin-top: 9%; /*was 80px*/
 }
 
 #contact-text{
