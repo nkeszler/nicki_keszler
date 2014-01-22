@@ -1,3 +1,9 @@
+/*@media(max-width: 1065px) {
+	.img_holder {
+		height: 25%;		
+	}
+}*/
+
 body{
 	background-color: #EBEBEB;
 }
@@ -29,12 +35,6 @@ src: local("olivier"), url( '/fonts/olivier_demo.ttf' ) format("truetype");
 	border-bottom: solid;
 	border-bottom-color: #AAA;
 	border-bottom-width: 5px;
-}
-
-@media(max-width: 1065px) {
-	.img_holder {
-		height: 25%;		
-	}
 }
 
 #header_img{
