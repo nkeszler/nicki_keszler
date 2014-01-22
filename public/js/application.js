@@ -80,6 +80,7 @@ $(document).ready(function(){
 		$('.text-area *').show()
 
 		var scrollIndex = $(window).scrollTop();
+		
 		// Moves header_img for perspective effect
 		$('#header_img').css({'margin-top' :-130 + (scrollIndex*0.5)});
 
