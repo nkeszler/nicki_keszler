@@ -1,17 +1,8 @@
 .main_container
-	%ul.nav.nav-pills.dragMe#navbar
-		%li
-			%a{href: "#"}
-				%span.glyphicon.glyphicon-home
-		%li
-			%a{href: "#"}
-				%span.glyphicon.glyphicon-envelope
-		%li
-			%a{href: "#"} 
-				%span.glyphicon.glyphicon-pushpin
 	.img_holder
 		%img#header_img{src: '/images/leaping.jpg'}
-	%img.img-circle.dragMe#nav_circle{src: '/images/leaping.jpg'}
+	%button#nav_circle{type: 'button', value: 'a'}
+		%img.img-circle{src: '/images/nk.png'}
 	.bottom_content
 		%h1#signature
 			Nichlas Keszler
@@ -22,17 +13,21 @@
 				Southampton, NY
 		.logos
 			.logo-container
-				%img.logo#m-logo(src='/images/mail-icon.png' data-text='nkeszler10@gmail.com')
-				%img.shadow{src: '/images/shadow.png'}
+				%a{href: ''}
+					%img.logo#m-logo(src='/images/mail-icon.png' data-text='nkeszler10@gmail.com')
+					%img.shadow{src: '/images/shadow.png'}
 			.logo-container
-				%img.logo#gh-logo(src='/images/github.png' data-text='github.com/nkeszler')
-				%img.shadow{src: '/images/shadow.png'}
+				%a{href: 'https://www.github.com/nkeszler'}
+					%img.logo#gh-logo(src='/images/github.png' data-text='github.com/nkeszler')
+					%img.shadow{src: '/images/shadow.png'}
 			.logo-container
-				%img.logo#fb-logo(src='/images/facebook-logo.png' data-text='facebook.com/nicki.keszler')
-				%img.shadow{src: '/images/shadow.png'}
+				%a{href: 'https://www.facebook.com/nicki.keszler'}
+					%img.logo#fb-logo(src='/images/facebook-logo.png' data-text='facebook.com/nicki.keszler')
+					%img.shadow{src: '/images/shadow.png'}
 			.logo-container
-				%img.logo#p-logo(src='/images/black-phone.png' data-text='+1 (631) 413-7143')
-				%img.shadow{src: '/images/shadow.png'}
+				%a{href: ''}
+					%img.logo#p-logo(src='/images/black-phone.png' data-text='+1 (631) 413-7143')
+					%img.shadow{src: '/images/shadow.png'}
 		.text-area
 			%h1#hide-line " The best time to plant a tree is 20 years ago.
 			%h1#line2 The second best time is now. "

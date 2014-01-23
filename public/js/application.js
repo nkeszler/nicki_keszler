@@ -13,7 +13,7 @@ function shrinkNavbar(){
 function growNavbar(){
 	$('#navbar').addClass('grow').removeClass('shrink');
 	$('#nav_circle').addClass('grow').removeClass('shrink');
-	$('li').slideDown(400);
+	$('li').show();
 };
 function toggleSignature(opacity){
 	if (opacity <= 0){
@@ -41,16 +41,16 @@ function removeContactText(){
 }
 function hoverIn(object, lastScroll, scrollAmount){
 	if(lastScroll > (scrollAmount*0.44)){
-		object.children().addClass('hover');
-		object.children().animate({width: "+=1px", height: "+=1px",'margin-left': "-=1px",'margin-bottom': "-=1px"},4);
-		displayContactText(object);
+		object.children().children().addClass('hover');
+		object.children().children().animate({width: "+=1px", height: "+=1px",'margin-left': "-=1px",'margin-bottom': "-=1px"},4);
+		displayContactText(object.children());
 		//$('.logo-container:not(.hover) img').animate({width: "-=1px", height: "-=1px"}, 4);  < --- Opposite Shrink/Grow
 	}
 }
 function hoverOut(object, lastScroll){
 		//$('.logo-container:not(.hover) img').animate({width: "+=1px", height: "+=1px"}, 4);  < --- Opposite Shrink/Grow
-		object.children().removeClass('hover');
-		object.children().animate({width: "-=1px", height: "-=1px",'margin-left': "+=1px",'margin-bottom': "+=1px"},4);
+		object.children().children().removeClass('hover');
+		object.children().children().animate({width: "-=1px", height: "-=1px",'margin-left': "+=1px",'margin-bottom': "+=1px"},4);
 		removeContactText();
 }
 function bob(){
@@ -64,6 +64,14 @@ function bob(){
 
 $(document).ready(function(){
 
+	// Clicking Navcircle
+	$('#nav_circle').on('click', function(){
+		if($(this).hasClass('shrink')){
+			$('#navbar').toggleClass('expand');
+			$('li').show();
+		}
+	});
+
 	var scrollAmount = $(document).height() - window.innerHeight;
 	console.log(scrollAmount);
 	var lastScroll = $(window).scrollTop();
@@ -75,12 +83,13 @@ $(document).ready(function(){
 		scrollAmount = $(document).height() - window.innerHeight;
 
 		// Disable hover: Hover + Contact Text
-		$('.logo-container>img').removeClass('hover');
+		$('.logo-container img').removeClass('hover');
 		$('#contact-text').remove();
 		$('.text-area *').show()
+		$('#navbar').removeClass('expand');
 
 		var scrollIndex = $(window).scrollTop();
-		
+
 		// Moves header_img for perspective effect
 		$('#header_img').css({'margin-top' :-130 + (scrollIndex*0.5)});
 
