@@ -1,0 +1,17 @@
+- if @success == 'true'
+	.alert.alert-success#message_success
+		Your message has been sent successfully!
+%form.form-horizontal#contact_form{action:'/send', method: 'post', role: "form"}
+	.form-group
+		%label.col-sm-2.control-label{for: "from"} From:
+		.col-sm-10
+			%input#from.form-control{placeholder: "Email", type: "email", name: "from"}
+	.form-group
+		%label.col-sm-2.control-label{for: "subject"} Subject:
+		.col-sm-10
+			%input#subject.form-control{placeholder: "Subject", name: "subject"}
+	.form-group
+		%textarea.form-control#email_content{rows:'15', cols:'100', placeholder: "Hey Nicki, You're Awesome...", name: "email_content"}
+	.form-group#send_button
+		%button.btn.btn-primary{type: "submit", style:'width:100%'}
+			%span.glyphicon.glyphicon-envelope

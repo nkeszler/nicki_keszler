@@ -9,31 +9,31 @@ body{
 }
 
 @font-face {
-
-font-family: 'olivier';
-
-src: url('/fonts/olivier_demo.ttf') format ('ttf');
-
-src: local("olivier"), url( '/fonts/olivier_demo.ttf' ) format("truetype");
-
+	font-family: 'olivier';
+	src: url('/fonts/olivier_demo.ttf') format ('ttf');
+	src: local("olivier"), url( '/fonts/olivier_demo.ttf' ) format("truetype");
 }
 
 @font-face{
 	font-family: "Bebas";
-
 	src: url('/fonts/BebasNeue.otf') format ('otf');
-
 	src: local("Bebas"), url( '/fonts/BebasNeue.otf' ) format("truetype");
+}
 
+@font-face{
+	font-family: 'run';
+	src: url('/fonts/run.ttf') format ('ttf');
+	src: local("run"), url( '/fonts/run.ttf' ) format("truetype");
 }
 
 #signature{
 	font-family: 'Bebas';
-	font-size: 7.7vw;
-	margin: 0px;
+	font-size: 8.6vw;
+	margin-left: 19px;
 	margin-top: 3%; /*was 40px*/
 	height: 18%; /*was 120px*/
 	position: absolute;
+	border-bottom-style: solid;
 }
 .img_holder{
 	width: 100%;
@@ -62,8 +62,9 @@ src: local("olivier"), url( '/fonts/olivier_demo.ttf' ) format("truetype");
 	top: 0px;
 	box-shadow: 0px 0px 15px 1px #888;
 	margin-left: -3%;
-	padding-left: 3%;
-	padding-right: 3%;
+	padding-left: 1%;
+	padding-right: 1%;
+	z-index: 100;
 }
 
 #navbar.shrink {
@@ -110,6 +111,7 @@ src: local("olivier"), url( '/fonts/olivier_demo.ttf' ) format("truetype");
 	border: none;
 	padding: 15px;
 	outline: none;
+	z-index: 101;
 }
 
 #nav_circle img {
@@ -131,13 +133,20 @@ src: local("olivier"), url( '/fonts/olivier_demo.ttf' ) format("truetype");
 	left: 46.08%;
 }
 
-.glyphicon{
+.nav .glyphicon{
 	font-size: 2.2vw;
+	padding-bottom: 5px;
+	width: 2em !important;
+	border-bottom: none;
+}
+
+.nav .glyphicon.active{
+	border-bottom: solid;
 }
 
 #signature_contact{
 	position: absolute;
-	padding-top: 3%; /*was 40px*/
+	padding-top: 4%; /*was 40px*/
 	right: 6.27%;
 	text-align: right;
 }
@@ -146,6 +155,8 @@ src: local("olivier"), url( '/fonts/olivier_demo.ttf' ) format("truetype");
 	font-family: 'Bebas';
 	font-size: 1.9vw;
 	margin-top: 0px;
+	border-bottom: solid;
+	padding-bottom: 15px;
 }
 
 #signature_contact h2{
@@ -200,4 +211,28 @@ src: local("olivier"), url( '/fonts/olivier_demo.ttf' ) format("truetype");
 #contact-text{
 	font-size: 4.1vw;
 	padding-top: 7%; /*was 80px*/
+}
+
+#contact_form{
+	width: 78%;
+	padding-top: 120px;
+	margin-left: 68px;
+	margin-right:auto;
+}
+
+#email_content{
+	margin-left: 18.3%;
+	width: 80%;
+	resize: none;
+}
+
+#send_button{
+	margin-left: 17%;
+	width: 83%;
+}
+
+#message_success{
+	position: absolute;
+	top: 110;
+	width: 90%;
 }

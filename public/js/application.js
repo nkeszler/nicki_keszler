@@ -18,10 +18,12 @@ function growNavbar(){
 function toggleSignature(opacity){
 	if (opacity <= 0){
 		$('#signature').hide();
-		$('#signature_contact').hide();	
+		$('#signature_contact').hide();
+		$('.logos').css({'visibility':'visible'});
 	}else{
 		$('#signature').show();
 		$('#signature_contact').show();	
+		$('.logos').css({'visibility':'hidden'});
 	}
 }
 function fadeSignatureAndLogos(scrollIndex, scrollAmount){
@@ -61,8 +63,20 @@ function bob(){
 	// 	$('.logos img:not(.logo)').animate({'opacity':'+=0.1'},800,bob());
 	// });
 }
+function setActiveNav(){
+	$('.nav .glyphicon').removeClass('active')
+	if (window.location.pathname.replace(/\//g, '') == ''){
+		$('.nav .glyphicon-home').addClass('active')
+	}else if (window.location.pathname.replace(/\//g, '') == 'contact'){
+		$('.nav .glyphicon-envelope').addClass('active')
+	}else{
+		$('.nav .glyphicon-pushpin').addClass('active')
+	}
+}
 
 $(document).ready(function(){
+
+	setActiveNav();
 
 	// Clicking Navcircle
 	$('#nav_circle').on('click', function(){
@@ -72,8 +86,10 @@ $(document).ready(function(){
 		}
 	});
 
+	// Success alert message timeout
+	setTimeout(function(){$('#message_success').slideUp(400)},1600);
+
 	var scrollAmount = $(document).height() - window.innerHeight;
-	console.log(scrollAmount);
 	var lastScroll = $(window).scrollTop();
 		// $('.dragMe').draggable({axis: 'y'});
 
@@ -106,24 +122,3 @@ $(document).ready(function(){
 	$('.logo-container').hover(function() { hoverIn($(this),lastScroll, scrollAmount) }, function() { hoverOut($(this),lastScroll)});
 
 });
-
-// For scroll up and down
-  //   if (scrollIndex > lastScroll){
-  //      $('#header_img').css({'margin-top' :'+=2px'});
-  //   }
-  //   else {
-  //      $('#header_img').css({'margin-top' :'-=2px'});
-  //   }
-  //   lastScroll = scrollIndex;
-
-	// $('.moving').on('mousedown',function(event){
-	// 	offsetX = event.offsetX;
-	// 	offsetY = event.offsetY;
-	// 	$(window).on('mousemove', function(event){
-	// 		event.preventDefault();
-	// 		$('.moving').css({'left':(event.pageX - offsetX) + 'px',
-	// 												'top' :(event.pageY - offsetY) + 'px'});
-	// 	});
-	// }).on('mouseup', function(){
-	// 	$(window).off('mousemove');
-	// });

@@ -6,16 +6,22 @@
     %link{href: "/stylesheets/application.css", rel: "stylesheet", type: "text/css"}
   %body
     %ul.nav.nav-pills.nav-justified#navbar
-      %li.active
-        %a{href: "/"}
-          %span.glyphicon.glyphicon-home
       %li
-        %a{href: "mailto:nkeszler@ohyeah.com"}
+        %a{href: "/"}
+          %span.glyphicon.glyphicon-home.active
+      %li
+        %a{href: "/contact"} 
           %span.glyphicon.glyphicon-envelope
       %li
-        %a{href: "#"} 
+        %a{href: "/blog"} 
           %span.glyphicon.glyphicon-pushpin
-    = yield
+    .main_container
+      .img_holder
+        %img#header_img{src: "#{@img_src}"}
+      %button#nav_circle{type: 'button'}
+        %img.img-circle{src: '/images/nk.png'}
+      .bottom_content
+        = yield
     %script{src: "/js/jquery.min.js", type: "text/javascript"}
     %script{src: "/js/jquery-ui.min.js", type: "text/javascript"}
     %script{src: "/bootstrap/js/bootstrap.min.js", type: "text/javascript"}
