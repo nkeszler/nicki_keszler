@@ -5,7 +5,7 @@
 }*/
 
 body{
-	background-color: #EBEBEB;
+	background-color: #000;
 }
 
 @font-face {
@@ -81,11 +81,13 @@ body{
 
 #navbar.expand {
 	transition: all 0.4s;
-	width: 30%;
+	width: 33%;
+	padding-left: 140px;
 }
 
 .nav-pills>li {
-	padding: 1%; /*was 12px*/
+	padding: 0.7%; /*was 12px*/
+	padding-top: 9px;
 }
 
 .bottom_content{
@@ -98,7 +100,7 @@ body{
 	width: 90%;
 	margin-left: 5%;
 	margin-top: 8.6%;  /*was 110px*/
-	box-shadow: 0px 50px 96px 50px #888;
+	box-shadow: 0px 50px 96px 50px #353535;
 }
 
 #nav_circle{
@@ -200,7 +202,7 @@ body{
 }
 
 .text-area *{
-	font-family: 'Salsa'
+	font-family: 'Bebas'
 }
 
 .text-area{
@@ -235,4 +237,35 @@ body{
 	position: absolute;
 	top: 110;
 	width: 90%;
+}
+
+.glyphicon-plus{
+	font-size: 20px;
+}
+
+#add-post{
+	float: right;
+	padding: 10px;
+}
+
+#blog-form{
+	padding: 25px;
+}
+
+.blog-post{
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	padding: 50px;
+	box-shadow: 0px 50px 96px 50px #353535;
+	background: white;
+}
+
+#blog-head{
+	margin: 0;
+	font-size: 151px;
+	font-family: 'Bebas';
+	padding-left: 25;
+	padding-top: 10;
 }

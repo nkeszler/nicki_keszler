@@ -73,16 +73,36 @@ function setActiveNav(){
 		$('.nav .glyphicon-pushpin').addClass('active')
 	}
 }
+function cropBottomContent(){
+	$('.bottom_content').css('height','25.4%')
+}
+function appendBlogPosts(){
+	$.getJSON('/blog_posts', function(response){
+ 			var posts = response.posts;
+ 			for (var i=0; i<posts.length; i++){
+ 				$('body').append("<div class='blog-post'><h1 id='title'>"+posts[i].title+"</h1><p id='text'>"+posts[i].text+"</p><h3 id='date'>"+posts[i].date+"</h3></div>")
+ 			}
+ 		});
+}
+function onBlog(){
+	return window.location.pathname.replace(/\//g, '') == 'blog'
+}
 
 $(document).ready(function(){
 
 	setActiveNav();
 
+	if (onBlog()){
+		cropBottomContent();
+		appendBlogPosts();
+	}
+
 	// Clicking Navcircle
 	$('#nav_circle').on('click', function(){
 		if($(this).hasClass('shrink')){
-			$('#navbar').toggleClass('expand');
-			$('li').show();
+			$('#navbar').toggleClass('expand', function(){
+				$('li').toggle(150);
+			});
 		}
 	});
 
