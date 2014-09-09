@@ -1,10 +1,10 @@
-%form#blog-form{role: "form", action: "/blog", method: "post"}
+%form#blog-form{role: "form", enctype: "multipart/form-data", action: "/blog", method: "post"}
   .form-group
     %label{for: "title"} Title
     %input#title.form-control{placeholder: "Title", type: "text", name: "title"}
   .form-group
     %label{for: "text"} Text
-    %textarea#text.form-control{rows: 5 ,placeholder: "...", type: "text", name: "text"}
+    %textarea#text.form-control{rows: 5 ,placeholder: "...", type: "text", id: 'text', name: "text"}
   .form-group
     %label{for: "image"} Image
     %input#image{type: "file", name: "image"}

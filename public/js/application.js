@@ -1,8 +1,16 @@
 function navbarToggle(scrollIndex, scrollAmount){
-	if (scrollIndex > (scrollAmount*0.85)){ // was 433
-		shrinkNavbar();
+	if (onBlog()){
+		if (scrollIndex > 433){
+			shrinkNavbar()
+		}else{
+			growNavbar()
+		}
 	}else{
-		growNavbar();
+		if (scrollIndex > (scrollAmount*0.85)){ // was 433
+			shrinkNavbar();
+		}else{
+			growNavbar();
+		}
 	}
 };
 function shrinkNavbar(){
@@ -78,9 +86,9 @@ function cropBottomContent(){
 }
 function appendBlogPosts(){
 	$.getJSON('/blog_posts', function(response){
- 			var posts = response.posts;
+ 			var posts = response.posts.reverse();
  			for (var i=0; i<posts.length; i++){
- 				$('body').append("<div class='blog-post'><h1 id='title'>"+posts[i].title+"</h1><p id='text'>"+posts[i].text+"</p><h3 id='date'>"+posts[i].date+"</h3></div>")
+ 				$('body').append("<div class='blog-post'><h1 id='title'>"+posts[i].title+"</h1><p id='text'>"+posts[i].text.replace("/n","<br/>")+"</p><h5 id='date'>"+posts[i].date+"</h5></div>")
  			}
  		});
 }

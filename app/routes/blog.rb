@@ -2,6 +2,15 @@ require 'json'
 
 class NickiKeszler < Sinatra::Application
 
+  def make_paperclip_mash(file_hash)
+    mash = Mash.new
+    mash['tempfile'] = file_hash[:tempfile]
+    mash['filename'] = file_hash[:filename]
+    mash['content_type'] = file_hash[:type]
+    mash['size'] = file_hash[:tempfile].size
+    mash
+  end
+
   get '/blog' do 
     @img_src = '/images/selfie.jpg'
     @posts = Post.all
@@ -16,9 +25,9 @@ class NickiKeszler < Sinatra::Application
     @post = Post.new
     @post.title = params[:title]
     @post.text = params[:text]
-    @post.photo = params[:image]
-    time = Time.now
-    @post.date = "#{time.day}/#{time.month}/#{time.year}"
+    @post.photo = Photo.new()
+    time = Time.new
+    @post.date = time.strftime("%d/%m/%y")
     if @post.save
       redirect('/blog')
     end

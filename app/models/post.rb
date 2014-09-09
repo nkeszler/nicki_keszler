@@ -5,7 +5,7 @@ class Post
   property :id, Serial                       
   property :title, String
   property :text, Text 
-  property :date, Date
+  property :date, String
 
   has 1, :photo
 
