@@ -14,7 +14,7 @@ end
 
 env = ENV["RACK_ENV"] || "development"
 
-DataMapper.setup(:default, "sqlite:#{Dir.pwd}/data/nicki_keszler_app_#{env}")
+DataMapper.setup(:default, "postgres:#{Dir.pwd}/data/nicki_keszler_app_#{env}")
 
 require_relative './models/init'
 
