@@ -1,6 +1,6 @@
 require 'sinatra'
 require 'haml'
-require 'data_mapper'
+# require 'data_mapper'
 # require 'dm-paperclip'
 
 require_relative './routes/init'
