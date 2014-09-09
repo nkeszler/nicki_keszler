@@ -13,7 +13,7 @@ class NickiKeszler < Sinatra::Application
 
   get '/blog' do 
     @img_src = '/images/blueprint.jpg'
-    @posts = Post.all
+    # @posts = Post.all
     haml :'/blog/index'
   end
 

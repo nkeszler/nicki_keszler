@@ -102,7 +102,7 @@ $(document).ready(function(){
 
 	if (onBlog()){
 		cropBottomContent();
-		appendBlogPosts();
+		// appendBlogPosts();
 	}
 
 	// Clicking Navcircle
