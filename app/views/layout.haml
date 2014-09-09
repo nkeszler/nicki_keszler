@@ -7,14 +7,9 @@
   %body
     %ul.nav.nav-pills.nav-justified#navbar
       %li
-        %a{href: "/"}
-          %span.glyphicon.glyphicon-home.active
+        %h3 Nicki Keszler CSCI 362 Blog: Software Engineering
       %li
-        %a{href: "/contact"} 
-          %span.glyphicon.glyphicon-envelope
-      %li
-        %a{href: "/blog"} 
-          %span.glyphicon.glyphicon-pushpin
+        %span.glyphicon.glyphicon-pushpin
     .main_container
       .img_holder
         %img#header_img{src: "#{@img_src}"}
@@ -26,3 +21,10 @@
     %script{src: "/js/jquery-ui.min.js", type: "text/javascript"}
     %script{src: "/bootstrap/js/bootstrap.min.js", type: "text/javascript"}
     %script{src: "/js/application.js", type: "text/javascript"}
+    .blog-post
+      %h1#title
+        Cheater
+      %p#text
+        cheat cheat cheat
+      %h5#date
+        11/09/13

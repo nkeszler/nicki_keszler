@@ -1,17 +1,22 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
-
 gem 'newrelic_rpm'
+gem 'nokogiri'
 gem 'sinatra'
 gem 'shotgun'
 gem 'capybara'
 gem 'data_mapper'
 gem 'dm-paperclip'
-gem 'sqlite3'
-#gem 'bcrypt-ruby'
+gem 'bcrypt-ruby'
 gem 'dm-sqlite-adapter'
 gem 'database_cleaner'
 gem 'rspec'
 gem 'haml'
 gem 'pony'
+
+group :production do
+  gem 'pg'
+end
+group :development, :test do
+  gem 'sqlite3'
+end
