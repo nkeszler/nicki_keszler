@@ -47,7 +47,7 @@ body{
 }
 
 #header_img{
-	width: 100%;
+	width: 102%;
 	margin-top: -130px;
 }
 
@@ -273,7 +273,7 @@ body{
 
 .blog-post #date{
 	position: relative;
-	bottom: 120px;
+	top: -220px;
 	left: 1000px;
 }
 

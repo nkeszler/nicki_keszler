@@ -23,8 +23,177 @@
     %script{src: "/js/application.js", type: "text/javascript"}
     .blog-post
       %h1#title
-        Cheater
+        HW 6
+      %b#text
+        4.5 Using the technique suggested here, where natural language descriptions are presented in a standard format, write plausible user requirements for the following functions:
       %p#text
-        cheat cheat cheat
+        %br
+        If a 3-D virtual museum system is installed in the museums that make up the consortium, it will most likely result in a loss of jobs for many of the current employees like tour guides who will no longer serve a purpose. New employees who know how to maintain and use the system will be hired. If the virtual tour has minor difficulties such as lagging from so many people using it at one museum, the customers will get frustrated and the museum will probably lose business, so it is a risky change.
+        %br
+      %b#text
+        4.6 Suggest how an engineer responsible for drawing up a system requirements specification might keep track of the relationships between functional and non-functional requirements.
+      %p#text
+        %br
+        The engineer might separately list the functional and non-functional requirements to determine what services the system should provide and what restraints it faces. Then he should find what requirements relate and which ones clash and try to sort out the difficulties. Overall he must take both functional and non-functional requirements into account and look at the system as a whole.
+      %b#text
+        4.7 Develop a set of use cases that could serve as a basis for understanding the requirements for an ATM system.
+      %p#text
+        %br
+        Insert and read information for card. Security validation of user, require pin access. Check account balance and offer options for ATM use. Deposit, withdraw from various accounts if other steps are successfully completed.
       %h5#date
-        11/09/13
+        08/26/14
+    .blog-post
+      %h1#title
+        HW 5
+      %p#text
+        While all of the accidents described in the required readings are extremely unfortunate, I’m personally not surprised to hear of these things happening as often as they do. All of these projects are extremely complicated and large systems with a lot of different components. What is surprising is how many different ways and chances there are for software to go awry. Software does not degrade and fail over time in the same way hardware does. It is deterministic, but it can often be extremely difficult to trace and understand all the faults in a program. It’s also important to note that while many of the issues that occurred as a result of bad programming, it’s not just a case of incompetence on the part of a developer. There are a lot of factors when designing, building, and implementing and any of those factors can yield failure.
+      %p
+        Large projects require a lot of people, time, organization and money. In order to minimize time and/or money, corners are cut. Companies may see this as a way of being efficient, but it seems to actually be the opposite. This can be seen easily in the case of the Therac-25. Cutting costs by removing hardware and relying solely on software resulted in several cases of patient death, shining a bad light on the company and costing money in lawsuits, out of court settlements. Software reliance in the Therac-25 also lead to even more money being spent on further testing and fixes for the machine.
+      %p
+        A similar scenario of corner-cutting is presented with the loss of several space craft. Budget cuts led to several projects under the supervision of very few people. With so much to do and so few people to work, things like this were bound to happen. One of the other major factors with the space craft failures, and perhaps the largest factor, was organizational and communication issues. The Mars Climate Orbiter is famous for having the stupidest reason to ever lose a spacecraft. Failure to account for unit conversion can be attributed to poor communication. The Ariane 5 and Mars Polar Lander suffered similar fates due to communication issues.
+      %p
+        Poor organization and communication coupled with extreme complexity seems to be the largest pitfall when dealing with software systems. The FBI’s VCF and Sentinel programs are prime examples of this, as years of work and 170 million dollars yielded nothing of use in the case of the VCF. The Sentinel program cost even more, but ultimately delivered something.
+        %br
+      %h5#date
+        09/02/14
+    .blog-post
+      %h1#title
+        HW 4
+      %b#text
+        11.4 – Giving reasons for your answer, suggest which dependability attributes are likely to be most critical for the following systems:
+      %p#text
+        %br
+        %b
+          An Internet server provided by an ISP with thousands of customers
+        %br
+        Availability – You certainly want an internet server to be available to as many people as possible at all times so that you do not lose potential customers. 
+        %br
+        Reliability – If an internet server is not reliable, customers will not trust it, considering the risk of losing files, and choose an alternate server.  
+        %br
+        Safety – Although a safe internet server is ideal, in the case of a failure, there will not likely be any damage caused.
+        %br
+        Security – With thousands of customers, there is a good chance of occasional intrusion attempts so it is critical that the server be secure.  
+        %p
+          %b
+            A computer-controlled scalpel used in keyhole surgery
+        Availability – Operations with a scalpel can occur anytime and often be emergencies, so they must always be available for the surgeon.
+        %br
+        Reliability – A casualty could occur if a scalpel malfunctioned during an operation, so they must be reliable. 
+        %br
+        Safety – If the scalpel fails during keyhole surgery, the patient is in danger of injury or death. 
+        %br
+        Security – It is highly unlikely that there would be any intrusions of a personal scalpel so security is not a priority.
+        %p
+          %br
+            %b
+              A directional control system used in a satellite launch vehicle
+
+        Availability – When the vehicle is ready to launch, it is necessary that the control system is available. 
+        %br
+        Reliability – If the system were to malfunction while the SLV is in flight, the vehicle would have no sense of direction and potentially lost or damaged.  
+        %br
+        Safety – A system failure during flight could be catastrophic for the SLV or potential people and objects that it may collide with.
+        %br
+        Security – If somebody was to hack into the system and alter the direction, lives and expensive property would be in danger.
+        %p
+          %br
+            %b
+              An Internet-based personal finance management system
+
+        Availability – The system should always be accessible for customers to make quick, important transactions. 
+        %br
+        Reliability – People could potentially run into financial problems like debt if the system’s data is incorrect.  
+        %br
+        Safety – If someone is unable to make an urgent transaction they could be faced with minor to life threatening issues. 
+        %br
+        Security – Security is of utmost importance because customers’ money and financial worth could be at stake in the case of an intruder.
+        %br
+      %b#text
+        11.7 – In a medical system that is designed to deliver radiation to treat tumors, suggest one hazard that may arise and propose one software feature that may be used to ensure that the identified hazard does not result in an accident.
+      %p#text
+        %br
+        One hazard that could potentially arise is a system crash or malfunction causing the patient to receive too little or too large of a dose of radiation. Too much radiation would not only put the patient’s health at risk but possibly the health of the surrounding medical staff. A software feature that could prevent an accident when a hazard is identified is one that would quit delivering radiation and signal the doctor to input the correct dose for the patient. 
+      %b#text
+        11.9 – Using the MHC-PMS as an example, identify three threats to this system (in addition to the threat shown in Figure 11.8). Suggest controls that might be put in place to reduce the chances of a successful attack based on these threats.
+      %p#text
+        %br
+          1. An employee changes the dose of meds being given to someone else’s patient for malicious reasons or bribery from the patient. This could be fixed by only allowing the user who entered the dosage, to edit it on their account.
+        %br
+          2. The computer crashes or dies while a doctor is entering information about a patient and the data is lost. This problem could be avoided by setting an automatic save after a certain amount of information has been entered, or amount of time has gone by.
+        %br
+          3. An intruder discovers an employees username and password and logs into their account to find personal information about a patient. This could be fixed by asking for additional conformation to access personal files and important data from the account. 
+      %h5#date
+        08/28/14
+    .blog-post
+      %h1#title
+        HW 3
+      %b#text
+        10.6 – A multimedia virtual museum system offering virtual experiences of ancient Greece is to be developed for a consortium of European museums. The system should provide users with the facility to view 3-D models of ancient Greece through a standard web browser and should also support an immersive virtual reality experience.What political and organizational difficulties might arise when the system is installed in the museums that make up the consortium?
+      %p#text
+        %br
+        If a 3-D virtual museum system is installed in the museums that make up the consortium, it will most likely result in a loss of jobs for many of the current employees like tour guides who will no longer serve a purpose. New employees who know how to maintain and use the system will be hired. If the virtual tour has minor difficulties such as lagging from so many people using it at one museum, the customers will get frustrated and the museum will probably lose business, so it is a risky change.
+        %br
+      %b#text
+        10.10 – You are an engineer involved in the development of a financial system. During installation, you discover that this system will make a significant number of people redundant. The people in the environment deny you access to essential information to complete the system installation. To what extent should you, as a systems engineer, become involved in this situation? Is it your professional responsibility to complete the installation as contracted? Should you simply abandon the work until the procuring organization has sorted out the problem?
+      %p#text
+        %br
+        After discovering the redundancies I would bring them to the attention of the company and let them know what I need to complete the system installation. Becoming involved beyond that is not my place as a systems engineer so I would complete the installation the best I can with the provided recourses.
+      %h5#date
+        08/26/14
+    .blog-post
+      %h1#title
+        HW 2
+      %p#text
+        The readings covered three different aspects of software engineering but touched on similar pros and cons. No Silver Bullet compares software to a fictional werewolf because they share ability to transform from a familiarity into a horrifying “monster”. To defeat a werewolf, one must use a silver bullet. In terms of software engineering, the “silver bullet” would drop computer software costs as rapidly as hardware costs by improving productivity, reliability and simplicity. Unfortunately, nothing similar to that exists and most likely never will because software is extremely complex and computer hardware is progressing at a substantial rate. It is interesting that this article was written in 1987, over 25 years ago, and there is still no “silver bullet” today.
+      %p
+        “Kode Vicious” (the author’s nickname) responds to two letters in Cherry-Picking and the Scientific Method, regarding problems that fellow software engineers are facing. In his first response, he relates software to a cherry orchard, with the cherries representing bugs and errors. He explains that all engineers will, at some point, get stuck in the “pits of cherry-picking” and when you feel like there is no getting out, it is time to stop and try again. I can relate to this because I constantly hit road blocks while coding and can’t seem to fix my errors or find my bugs. In his second response he addresses a scientific debugging technique. He says “When you approach a problem, you should do it in a way that mirrors the scientific method”. This method entails creating a theory (the problem) and developing hypotheses to test in order to solve the problem. KV’s final advice is to write everything down and keep your hypotheses, whether they were successes or failures, because they might help you solve similar problems in the future. I need to get more in the habit of writing things down instead of cramming them in my head because I wind up forgetting and backtracking which wastes time and energy. 
+      %p
+        “Software analytics is analytics on software data for managers and software engineers with the aim of empowering software development individuals and teams to gain and share insight from their data to make better decisions” as described in Software Analytics: So What? This article focuses on the principles and applications of analytics. Software analytics must be real time and actionable so their data must be recent and not outdated. It is also important that it shares information because lessons learned from one project can’t always be applied to another.
+      %p
+        The authors of these articles talk about similar topics but deliver them in unique, creative ways. They all would agree that good software requires skilled engineers and lots of debugging. As No Silver Bullet stresses, there is no simple formula to advance software at the rate that hardware is advancing. “Great designs come from great designers”. Software Analytics: So What? also expresses the importance of engineers stating, “More important than the hardware is how that hardware is used by skilled data scientists”. What good is a tool if nobody knows how to use it? No matter how skilled a programmer is, though, he is going to run into many errors and have lots of debugging to do, or “cherry-picking” according to Cherry-Picking and the Scientific Method. Sometimes It takes persistence and team work to get out of the “cherry orchard”.
+        %br
+      %h5#date
+        08/26/14
+    .blog-post
+      %h1#title
+        HW 1
+      %b#text
+        1.10 To help counter terrorism, many countries are planning or have developed computer systems that track large numbers of their citizens and their actions. Clearly this has privacy implications. Discuss the ethics of working on the development of this type of system.
+      %p#text
+        %br
+        Unfortunately, not everything in the world is black and white and situations like this occur. There are many people who value their privacy significantly, but is it possible that it is now necessary to give up some privacy for the sake of safety? An engineer offered a chance to work on this project would have to weigh both sides, and determine if it’s ethical to work on. He/She could justify working on it by claiming that it is a necessary evil to keep an even larger evil at bay; however, he/she could refuse on the grounds that this project is interfering with and spying on people’s lives who have no say in the matter, and that it isn’t ethically sound to punish innocents for the faults of others.
+        %br
+      %b#text
+        1.9 For each of the clauses in the ACM/IEEE Code of Ethics shown in Figure 1.3, suggest an appropriate example that illustrates that clause.
+      %p#text
+        %p
+        Public: An engineer would work on a project that is ethically sound. It is not ethically sound to work on a project that harms others for the sake of harming others.
+        %p 
+        Client and Employer: The engineer would focus on their project’s requirement as outlined by their client and employer, and he/she would get the work done in a timely manner. He/She would not make a product that is not in line with what the client wanted.
+        %p
+        Product: When an engineer releases a product or a new iteration of one, the product will be thoroughly tested and fully functional when deployed.
+        %p
+        Judgement: If an engineer is offered a project that could harm people, perhaps in the name of national security, he/she must decide if this is okay.
+        %p
+        Management: Managers in charge of a project should not exploit his/her employees. For example, he/she should not force 16 hour work days in order to save time and push a project out more quickly.
+        %p
+        Profession: An engineer should not use their technical knowledge maliciously. This includes distribution of viruses or breaking into systems. Engaging in those activities shines a bad light on the profession.
+        %p
+        Colleagues: One should not berate or shame others if he/she appears less capable. If one is having trouble, he/she should be supportive and offer help rather than make it worse or let them stagnate.
+        %p
+        Self: An engineer will work ethically and continue to do so throughout their lifetime.As new languages and techniques are introduced, one should do their best to keep up with these advancements.
+        %br
+      %b#text
+        1.8 Discuss whether professional engineers should be certified in the same way as doctors or lawyers.
+      %p#text
+        %br
+        I believe that this depends on the type of work or projects the engineer would be working on. It’s possible to be working on something that does not have the potential to harm anybody or anything, like a video game. In that scenario, I feel that the certification would not be necessary. If a project can hurt people or be damaging to anything in a significant way, then they should be certified.
+        %br
+      %b#text
+        1.3 What are the four important attributes that all professional software should have? Suggest four other attributes that may sometimes be significant.
+      %p#text
+        %br
+        According to the book, the professional software “should deliver the required functionality and performance to the user and should be maintainable, dependable, and usable.” As well as being secure, portable, scalable, and extremely precise.
+        %br
+      %h5#date
+        08/26/14
